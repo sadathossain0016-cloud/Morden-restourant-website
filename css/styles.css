@@ -1,0 +1,200 @@
+/* ========================================================
+   L'Étoile Bistro - Modern Fine Dining Gastronomic Website
+   Editorial Luxury Design System & Custom Components
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+:root {
+  --color-surface: #fcf9f4;
+  --color-surface-dim: #dcdad5;
+  --color-surface-lowest: #ffffff;
+  --color-surface-low: #f6f3ee;
+  --color-surface-container: #f0ede9;
+  --color-surface-high: #ebe8e3;
+  --color-surface-highest: #e5e2dd;
+  --color-on-surface: #1c1c19;
+  --color-on-surface-variant: #444748;
+  --color-charcoal-pure: #121212;
+  --color-charcoal-elevated: #222222;
+  --color-parchment-cream: #FDFBF7;
+  --color-culinary-gold-bright: #D4AF37;
+  --color-culinary-gold-muted: #C5A880;
+  --color-terracotta-rich: #B85D3A;
+  --color-terracotta-soft: #EBDCD5;
+  --color-border-hairline: rgba(26, 26, 26, 0.08);
+  --color-border-gold: rgba(197, 168, 128, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-on-surface);
+  background-color: var(--color-surface);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f0ede9;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B85D3A;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Glassmorphism & Frosted Effects */
+.glass-nav {
+  background-color: rgba(252, 249, 244, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(26, 26, 26, 0.06);
+}
+
+.glass-dark {
+  background-color: rgba(18, 18, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(197, 168, 128, 0.2);
+}
+
+/* Hairline borders */
+.border-gold-hairline {
+  border: 1px solid rgba(197, 168, 128, 0.28);
+}
+
+.border-hairline-subtle {
+  border: 1px solid rgba(26, 26, 26, 0.08);
+}
+
+/* Animated Underline for Links */
+.hover-gold-line {
+  position: relative;
+}
+.hover-gold-line::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1.5px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--color-culinary-gold-muted);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-gold-line:hover::after {
+  width: 100%;
+}
+
+/* Pulse animation for Live Status badge */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.6;
+  }
+}
+.pulse-indicator {
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+/* Smooth Image Scale on Hover */
+.dish-card-img {
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.group:hover .dish-card-img {
+  transform: scale(1.06);
+}
+
+/* Toast Notification Styles */
+#toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+
+.toast-item {
+  pointer-events: auto;
+  transform: translateY(1.5rem);
+  opacity: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.toast-item.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Modal Animations */
+.modal-overlay {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-content {
+  transform: scale(0.95) translateY(10px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Tasting Wishlist Drawer */
+#wishlist-drawer {
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#wishlist-drawer.active {
+  transform: translateX(0);
+}
+
+/* Print Stylesheet for Michelin Menu & Confirmation Receipts */
+@media print {
+  header, footer, #wishlist-drawer, #toast-container, .no-print, button:not(.printable-btn) {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+}
+

@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>L'Étoile Bistro | Modern Artisanal Gastronomy & Fine Dining</title>
+  <meta name="description" content="L'Étoile Bistro honors Parisian heritage through the lens of modern terroir. Experience Michelin-acclaimed fine dining, rare cellar pairings, and seasonal French gastronomy."/>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png"/>
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface": "#fcf9f4",
+            "surface-dim": "#dcdad5",
+            "surface-bright": "#fcf9f4",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f6f3ee",
+            "surface-container": "#f0ede9",
+            "surface-container-high": "#ebe8e3",
+            "surface-container-highest": "#e5e2dd",
+            "on-surface": "#1c1c19",
+            "on-surface-variant": "#444748",
+            "inverse-surface": "#31302d",
+            "inverse-on-surface": "#f3f0eb",
+            "outline": "#747878",
+            "outline-variant": "#c4c7c7",
+            "primary": "#000000",
+            "on-primary": "#ffffff",
+            "primary-container": "#1c1b1b",
+            "on-primary-container": "#858383",
+            "secondary": "#725b38",
+            "on-secondary": "#ffffff",
+            "secondary-container": "#fedeb2",
+            "on-secondary-container": "#78603e",
+            "charcoal-pure": "#121212",
+            "charcoal-elevated": "#222222",
+            "parchment-cream": "#FDFBF7",
+            "culinary-gold-bright": "#D4AF37",
+            "culinary-gold-muted": "#C5A880",
+            "terracotta-rich": "#B85D3A",
+            "terracotta-soft": "#EBDCD5",
+            "border-hairline": "rgba(26, 26, 26, 0.08)",
+            "border-hairline-dark": "rgba(197, 168, 128, 0.2)"
+          },
+          fontFamily: {
+            "display": ["Playfair Display", "serif"],
+            "headline": ["Playfair Display", "serif"],
+            "body": ["Plus Jakarta Sans", "sans-serif"],
+            "label": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          spacing: {
+            "gutter": "2rem",
+            "margin": "4rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "2rem",
+            "space-xl": "3.5rem"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased selection:bg-culinary-gold-muted selection:text-charcoal-pure">
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+    <div class="h-20 w-full px-4 sm:px-8 lg:px-margin flex items-center justify-between">
+      
+      <!-- Brand Logo & Live Hours -->
+      <div class="flex items-center gap-space-md">
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img alt="L'Étoile Bistro Logo" class="h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="images/logo.png" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/AEtjO1U8h4RpB-P3H46h944ym_YXa8gmD0Ot4cSSUUI0K8De1A4f_eR874hDmPb7feIFBZkKRFs4aafcHW1KdIQYgAY1Zdy468uKkTum9uE5abjIQMjjqLOilxWelWIeCJIZ2zwhJnH0OIQwnmWjdNPbiipyzJ-chz3jWFJGjAKjjhF_rl5BHf2GNsub7G5Mm_xaNuA6KK1mt8nwCRKEYyMTz829EZXQcpH5vw-9qzoBOaWEcg';"/>
+          <span class="font-headline text-xl sm:text-2xl tracking-tight text-on-surface group-hover:text-secondary transition-colors font-semibold">L'Étoile Bistro</span>
+        </a>
+        <div id="live-status-pill" class="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-terracotta-soft text-terracotta-rich font-label text-xs uppercase tracking-wider font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-culinary-gold-muted"></span>
+          <span>Open Today 17:30 – 23:00</span>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-xs xl:text-sm font-label uppercase tracking-widest font-semibold text-on-surface-variant">
+        <a class="hover:text-on-surface hover-gold-line py-1 transition-colors" href="#our-story">Our Story</a>
+        <a class="hover:text-on-surface hover-gold-line py-1 transition-colors" href="#featured-menu">Specialties Menu</a>
+        <a class="hover:text-on-surface hover-gold-line py-1 transition-colors" href="#cellar">The Cellar</a>
+        <a class="hover:text-on-surface hover-gold-line py-1 transition-colors" href="#reservation">Reserve Table</a>
+        <a class="hover:text-on-surface hover-gold-line py-1 transition-colors" href="#reviews">Reviews</a>
+        <a class="hover:text-on-surface hover-gold-line py-1 transition-colors" href="#location-hours">Location & Hours</a>
+      </nav>
+
+      <!-- Header Action Utilities -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <!-- Direct Phone Link -->
+        <a class="hidden 2xl:flex items-center gap-1.5 text-xs font-label uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" href="tel:+14155550198">
+          <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">call</span>
+          <span>+1 (415) 555-0198</span>
+        </a>
+
+        <!-- Tasting Wishlist Button -->
+        <button onclick="toggleWishlistDrawer(true)" class="relative p-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" title="View Tasting Wishlist">
+          <span class="material-symbols-outlined text-[20px] text-secondary">bookmark</span>
+          <span class="wishlist-counter absolute -top-1 -right-1 w-5 h-5 rounded-full bg-terracotta-rich text-white text-[11px] font-bold items-center justify-center hidden">0</span>
+        </button>
+
+        <!-- Active Bookings Pill (Dynamic) -->
+        <button id="my-bookings-btn" onclick="openMyBookingsModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-xs font-label uppercase tracking-wider text-on-surface hover:bg-surface-container-high transition-colors hidden" title="View My Bookings">
+          <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">calendar_month</span>
+          <span>My Table (<span class="booking-count font-bold text-secondary">0</span>)</span>
+        </button>
+
+        <!-- Book Table CTA -->
+        <a class="hidden sm:inline-flex px-5 py-2.5 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider font-semibold hover:bg-culinary-gold-bright transition-all shadow-sm transform hover:-translate-y-0.5" href="#reservation">
+          Reserve a Table
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button onclick="toggleMobileMenu(true)" class="lg:hidden p-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div id="mobile-backdrop" onclick="toggleMobileMenu(false)" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] z-50 bg-surface shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center justify-between pb-4 border-b border-hairline-subtle">
+        <div class="flex items-center gap-2">
+          <img alt="Logo" class="h-7 w-auto" src="images/logo.png"/>
+          <span class="font-headline text-lg font-semibold text-on-surface">L'Étoile Bistro</span>
+        </div>
+        <button onclick="toggleMobileMenu(false)" class="p-1 rounded-full text-outline hover:text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 font-label text-sm uppercase tracking-widest font-semibold text-on-surface-variant">
+        <a onclick="toggleMobileMenu(false)" class="py-2 hover:text-secondary border-b border-hairline-subtle/40" href="#our-story">Our Story</a>
+        <a onclick="toggleMobileMenu(false)" class="py-2 hover:text-secondary border-b border-hairline-subtle/40" href="#featured-menu">Specialties Menu</a>
+        <a onclick="toggleMobileMenu(false)" class="py-2 hover:text-secondary border-b border-hairline-subtle/40" href="#cellar">The Cellar</a>
+        <a onclick="toggleMobileMenu(false)" class="py-2 hover:text-secondary border-b border-hairline-subtle/40" href="#reservation">Reserve Table</a>
+        <a onclick="toggleMobileMenu(false)" class="py-2 hover:text-secondary border-b border-hairline-subtle/40" href="#reviews">Reviews</a>
+        <a onclick="toggleMobileMenu(false)" class="py-2 hover:text-secondary border-b border-hairline-subtle/40" href="#location-hours">Location & Hours</a>
+      </nav>
+
+      <div class="flex flex-col gap-3 pt-2">
+        <button onclick="toggleMobileMenu(false); toggleWishlistDrawer(true);" class="w-full py-2.5 px-4 rounded-lg bg-surface-container flex items-center justify-between font-label text-xs uppercase tracking-wider text-on-surface">
+          <span class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-secondary">bookmark</span>
+            <span>Tasting Wishlist</span>
+          </span>
+          <span class="wishlist-counter px-2 py-0.5 rounded-full bg-terracotta-rich text-white text-[10px] font-bold">0</span>
+        </button>
+        <button onclick="toggleMobileMenu(false); openMyBookingsModal();" class="w-full py-2.5 px-4 rounded-lg bg-surface-container flex items-center gap-2 font-label text-xs uppercase tracking-wider text-on-surface">
+          <span class="material-symbols-outlined text-[18px] text-culinary-gold-muted">calendar_month</span>
+          <span>View My Bookings</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="pt-6 border-t border-hairline-subtle flex flex-col gap-3">
+      <a onclick="toggleMobileMenu(false)" href="#reservation" class="w-full py-3 rounded-lg bg-culinary-gold-muted text-charcoal-pure text-center font-label text-xs uppercase tracking-wider font-semibold hover:bg-culinary-gold-bright transition-colors shadow">
+        Book a Table Now
+      </a>
+      <a href="tel:+14155550198" class="flex items-center justify-center gap-2 text-xs font-label text-on-surface-variant">
+        <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">call</span>
+        <span>+1 (415) 555-0198</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main class="w-full pt-20 bg-surface">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative w-full -mt-20 overflow-hidden bg-charcoal-pure min-h-screen flex items-end">
+      <!-- Background Image with Scrim Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img alt="Pan-Seared Duck Breast" class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000 ease-out brightness-[0.78] contrast-[1.08]" src="images/duck-breast.png"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-pure via-charcoal-pure/55 to-charcoal-pure/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-charcoal-pure/90 via-charcoal-pure/45 to-transparent"></div>
+      </div>
+
+      <!-- Hero Content Container -->
+      <div class="relative z-10 w-full px-4 sm:px-8 lg:px-margin pt-36 pb-16 flex flex-col justify-end">
+        <!-- Michelin & Heritage Pill Badge -->
+        <div class="flex flex-wrap items-center gap-space-sm mb-space-md">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded bg-terracotta-soft/20 backdrop-blur-md text-culinary-gold-bright font-label text-xs uppercase tracking-widest shadow-sm border border-culinary-gold-muted/30">
+            <span class="material-symbols-outlined text-[15px] text-culinary-gold-bright" style="font-variation-settings: 'FILL' 1;">stars</span>
+            Michelin Guide 2024 Selection
+          </span>
+          <span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-culinary-gold-muted/60"></span>
+          <span class="hidden sm:inline-flex items-center gap-1 font-label text-xs text-surface-container-high tracking-widest uppercase">
+            Artisanal French Gastronomy
+          </span>
+        </div>
+
+        <!-- Headline & Tagline -->
+        <div class="max-w-4xl flex flex-col gap-space-md">
+          <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl text-parchment-cream leading-[1.1] tracking-tight drop-shadow-sm font-normal">
+            A Symphony of <span class="italic font-normal text-culinary-gold-bright">Seasonal French Gastronomy</span> &amp; Artisanal Craft.
+          </h1>
+          <p class="font-body text-base sm:text-lg text-surface-variant max-w-2xl leading-relaxed">
+            Experience culinary artistry crafted with local seasonal harvests, heritage French techniques, and an unforgettable cellar selection in the historic heart of the city.
+          </p>
+        </div>
+
+        <!-- Hero Actions -->
+        <div class="flex flex-wrap items-center gap-space-md mt-space-lg">
+          <a class="px-8 py-4 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-sm uppercase tracking-wider font-semibold hover:bg-culinary-gold-bright hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 flex items-center gap-2" href="#reservation">
+            <span>Reserve a Table</span>
+            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+          </a>
+          <a class="px-8 py-4 rounded-lg bg-surface-container-lowest/10 backdrop-blur-md text-parchment-cream font-label text-sm uppercase tracking-wider font-semibold hover:bg-surface-container-lowest/20 transition-all duration-300 flex items-center gap-2 border border-white/10" href="#featured-menu">
+            <span class="material-symbols-outlined text-culinary-gold-bright text-[18px]">restaurant_menu</span>
+            <span>Explore Specialties</span>
+          </a>
+        </div>
+
+        <!-- Quick Highlights Bar -->
+        <div class="mt-space-xl pt-space-md grid grid-cols-1 md:grid-cols-3 gap-space-md max-w-5xl glass-dark p-space-md rounded-xl shadow-2xl">
+          <div class="flex items-center gap-space-sm px-space-sm">
+            <div class="w-10 h-10 rounded-full bg-culinary-gold-muted/20 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-culinary-gold-bright text-[20px]">local_florist</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs uppercase tracking-wider font-semibold text-parchment-cream">Farm-to-Table Freshness</span>
+              <span class="font-body text-xs text-outline-variant">98% local &amp; bio-dynamic purveyors</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm px-space-sm border-t md:border-t-0 md:border-l border-hairline-dark pt-3 md:pt-0">
+            <div class="w-10 h-10 rounded-full bg-culinary-gold-muted/20 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-culinary-gold-bright text-[20px]">wine_bar</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs uppercase tracking-wider font-semibold text-parchment-cream">Curated Grand Cellar</span>
+              <span class="font-body text-xs text-outline-variant">350+ rare vintages &amp; pairings</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-space-sm px-space-sm border-t md:border-t-0 md:border-l border-hairline-dark pt-3 md:pt-0">
+            <div class="w-10 h-10 rounded-full bg-culinary-gold-muted/20 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-culinary-gold-bright text-[20px]">countertops</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs uppercase tracking-wider font-semibold text-parchment-cream">Chef's Open Counter</span>
+              <span class="font-body text-xs text-outline-variant">Direct sensory culinary theater</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR STORY / ATELIER SECTION -->
+    <section class="w-full px-4 sm:px-8 lg:px-margin py-24 bg-surface" id="our-story">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+        
+        <!-- Story Narrative Column -->
+        <div class="lg:col-span-6 flex flex-col gap-space-md pr-0 lg:pr-space-md">
+          <div class="flex items-center gap-space-xs text-culinary-gold-muted">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+            <span class="font-label text-xs uppercase tracking-widest font-semibold text-secondary">The Atelier &amp; Philosophy</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl text-on-surface leading-tight font-normal">
+            Crafted with Soul, Plated with <span class="italic text-secondary">Precision</span>.
+          </h2>
+          <div class="space-y-space-sm font-body text-base text-on-surface-variant leading-relaxed">
+            <p>
+              Under the visionary culinary direction of Chef Julien Mercier, L’Étoile Bistro honors Parisian heritage through the lens of modern West Coast terroir. We believe a truly remarkable meal is an intimate journey—reverent of soil, season, and time.
+            </p>
+            <p>
+              Every sauce undergoes hours of simmering, every botanical herb is cut by sunrise, and every protein is selected exclusively from small-plot heritage farms. We strip away pretension to celebrate authentic flavors in their purest, most elevated light.
+            </p>
+          </div>
+
+          <!-- Chef Quote Card -->
+          <div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-sm mt-space-xs border border-hairline-subtle">
+            <span class="material-symbols-outlined text-culinary-gold-muted text-[32px] shrink-0">format_quote</span>
+            <div>
+              <p class="font-headline text-lg sm:text-xl italic text-on-surface">
+                "We do not manipulate ingredients; we reveal their destiny through fire, patience, and memory."
+              </p>
+              <div class="mt-space-xs flex items-center gap-space-sm">
+                <span class="font-label text-xs uppercase tracking-wider text-on-surface font-semibold">Julien Mercier</span>
+                <span class="text-outline text-[12px]">•</span>
+                <span class="font-body text-xs text-on-surface-variant">Executive Chef &amp; Proprietor</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Metrics Counters -->
+          <div class="grid grid-cols-3 gap-space-md pt-space-sm mt-space-xs">
+            <div class="flex flex-col">
+              <span class="font-display text-4xl sm:text-5xl text-on-surface">14</span>
+              <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant font-semibold">Years of Craft</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display text-4xl sm:text-5xl text-culinary-gold-muted">3</span>
+              <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant font-semibold">Michelin Bibs</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="font-display text-4xl sm:text-5xl text-on-surface">100%</span>
+              <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant font-semibold">Bio-Dynamic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Visual Column -->
+        <div class="lg:col-span-6 relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container">
+            <img alt="Executive Chef Julien Mercier plating in open kitchen" class="w-full h-[540px] object-cover object-center transform hover:scale-105 transition-transform duration-700 ease-out" src="images/chef-plating.png"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal-pure/80 via-transparent to-transparent"></div>
+            
+            <!-- Floating Badge Card -->
+            <div class="absolute bottom-6 left-6 right-6 p-space-md rounded-xl glass-nav shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-hairline-subtle">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-12 h-12 rounded-full bg-culinary-gold-muted/20 flex items-center justify-center text-secondary shrink-0">
+                  <span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline text-lg text-on-surface font-semibold">L'Atelier Open Kitchen</span>
+                  <span class="font-body text-xs text-on-surface-variant">Experience every flame and flourish up close</span>
+                </div>
+              </div>
+              <button onclick="bookChefCounter()" class="px-4 py-2 rounded bg-primary text-on-primary font-label text-xs uppercase tracking-wider hover:bg-charcoal-elevated transition-colors text-center shrink-0">
+                Book Counter
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CURATED SEASONAL SPECIALTIES / MENU -->
+    <section class="w-full px-4 sm:px-8 lg:px-margin py-24 bg-surface-container-low" id="featured-menu">
+      <div class="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
+        <span class="font-label text-xs uppercase tracking-widest text-secondary font-semibold mb-space-xs">Gastronomic Canvas</span>
+        <h2 class="font-display text-3xl sm:text-5xl text-on-surface font-normal">Curated Seasonal Specialties</h2>
+        <p class="font-body text-base text-on-surface-variant mt-space-xs max-w-xl">
+          Crafted daily based on coastal catch arrivals and morning harvest dispatches from our Sonoma micro-growers.
+        </p>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap items-center justify-center gap-1.5 p-1.5 rounded-xl bg-surface-container mt-space-md shadow-sm border border-hairline-subtle" id="menu-tabs">
+          <button class="menu-tab-btn px-5 py-2 rounded-lg font-label text-xs uppercase tracking-wider bg-primary text-on-primary transition-all font-semibold" onclick="filterMenu('all', this)">All Courses</button>
+          <button class="menu-tab-btn px-5 py-2 rounded-lg font-label text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all font-semibold" onclick="filterMenu('starters', this)">Starters</button>
+          <button class="menu-tab-btn px-5 py-2 rounded-lg font-label text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all font-semibold" onclick="filterMenu('mains', this)">Mains</button>
+          <button class="menu-tab-btn px-5 py-2 rounded-lg font-label text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all font-semibold" onclick="filterMenu('desserts', this)">Desserts</button>
+          <button class="menu-tab-btn px-5 py-2 rounded-lg font-label text-xs uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-all font-semibold" onclick="filterMenu('cocktails', this)">Cocktails</button>
+        </div>
+
+        <!-- Dietary Filters & Search Bar -->
+        <div class="w-full flex flex-col sm:flex-row items-center justify-between gap-3 mt-4 pt-2">
+          <!-- Dietary Pills -->
+          <div class="flex flex-wrap items-center justify-center gap-2">
+            <button onclick="filterByTag('all', this)" class="tag-filter-btn px-3 py-1 rounded-full text-xs font-label uppercase tracking-wider bg-secondary text-white transition-colors">All Types</button>
+            <button onclick="filterByTag('signature', this)" class="tag-filter-btn px-3 py-1 rounded-full text-xs font-label uppercase tracking-wider bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">Chef's Signature</button>
+            <button onclick="filterByTag('vegetarian', this)" class="tag-filter-btn px-3 py-1 rounded-full text-xs font-label uppercase tracking-wider bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">Vegetarian</button>
+            <button onclick="filterByTag('gluten-free', this)" class="tag-filter-btn px-3 py-1 rounded-full text-xs font-label uppercase tracking-wider bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">Gluten-Free</button>
+          </div>
+
+          <!-- Live Search Input -->
+          <div class="relative w-full sm:w-64">
+            <span class="material-symbols-outlined absolute left-3 top-2.5 text-[18px] text-outline">search</span>
+            <input id="menu-search" oninput="renderMenu()" type="text" placeholder="Search dish or wine..." class="w-full pl-9 pr-4 py-2 rounded-lg bg-surface-container-lowest text-xs font-body text-on-surface focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Cards Grid (Rendered via JS) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter" id="menu-grid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <!-- Action Row: Printable PDF Menu & Cellar link -->
+      <div class="mt-14 flex flex-wrap items-center justify-center gap-4">
+        <button onclick="openPrintableMenuModal()" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-high text-on-surface font-label text-xs uppercase tracking-wider hover:bg-surface-container-highest transition-colors shadow-sm font-semibold">
+          <span class="material-symbols-outlined text-secondary text-[20px]">description</span>
+          <span>Download Full Seasonal Menu (PDF)</span>
+        </button>
+        <button onclick="toggleWishlistDrawer(true)" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-secondary text-white font-label text-xs uppercase tracking-wider hover:bg-secondary/90 transition-colors shadow-sm font-semibold">
+          <span class="material-symbols-outlined text-[20px]">bookmark</span>
+          <span>View Tasting Wishlist (<span class="wishlist-counter">0</span>)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- SOMMELIER GRAND CELLAR & PAIRING GUIDE -->
+    <section class="w-full px-4 sm:px-8 lg:px-margin py-24 bg-charcoal-pure text-parchment-cream relative overflow-hidden" id="cellar">
+      <div class="max-w-6xl mx-auto flex flex-col gap-12 relative z-10">
+        
+        <div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 pb-8 border-b border-hairline-dark">
+          <div>
+            <div class="flex items-center gap-2 text-culinary-gold-bright mb-2">
+              <span class="material-symbols-outlined text-[20px]">wine_bar</span>
+              <span class="font-label text-xs uppercase tracking-widest font-semibold">The Grand Cellar</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-5xl text-parchment-cream font-normal">Head Sommelier's Reserve</h2>
+          </div>
+          <p class="font-body text-sm sm:text-base text-surface-variant max-w-lg leading-relaxed">
+            Over 350 curated labels from ancient Grand Cru terroirs of Burgundy, Bordeaux, Rhône, and biodynamic Sonoma vineyards, preserved via Coravin for glass pours.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Left: Wine Profile Selector -->
+          <div class="lg:col-span-5 flex flex-col gap-3">
+            <span class="font-label text-xs uppercase tracking-wider text-outline-variant font-semibold">Select Dish or Flavor Profile:</span>
+            
+            <button onclick="selectPairingVibe('seafood', this)" class="pairing-vibe-btn text-left p-4 rounded-xl bg-charcoal-elevated hover:bg-culinary-gold-muted hover:text-charcoal-pure border border-hairline-dark transition-all flex items-center justify-between group">
+              <div>
+                <h4 class="font-headline text-lg group-hover:text-charcoal-pure">Coastal Catch & Raw Bar</h4>
+                <span class="text-xs text-outline-variant group-hover:text-charcoal-pure/80">Mineral, Saline, Chablis Grand Cru</span>
+              </div>
+              <span class="material-symbols-outlined text-culinary-gold-bright group-hover:text-charcoal-pure">chevron_right</span>
+            </button>
+
+            <button onclick="selectPairingVibe('poultry', this)" class="pairing-vibe-btn text-left p-4 rounded-xl bg-culinary-gold-muted text-charcoal-pure border border-hairline-dark transition-all flex items-center justify-between group">
+              <div>
+                <h4 class="font-headline text-lg text-charcoal-pure font-semibold">Magret Duck & Roasted Game</h4>
+                <span class="text-xs text-charcoal-pure/80">Silky Vosne-Romanée, Wild Cherries</span>
+              </div>
+              <span class="material-symbols-outlined text-charcoal-pure">chevron_right</span>
+            </button>
+
+            <button onclick="selectPairingVibe('truffles', this)" class="pairing-vibe-btn text-left p-4 rounded-xl bg-charcoal-elevated hover:bg-culinary-gold-muted hover:text-charcoal-pure border border-hairline-dark transition-all flex items-center justify-between group">
+              <div>
+                <h4 class="font-headline text-lg group-hover:text-charcoal-pure">Black Truffle & Tagliatelle</h4>
+                <span class="text-xs text-outline-variant group-hover:text-charcoal-pure/80">Buttery Meursault, Brioche, Hazelnut</span>
+              </div>
+              <span class="material-symbols-outlined text-culinary-gold-bright group-hover:text-charcoal-pure">chevron_right</span>
+            </button>
+
+            <button onclick="selectPairingVibe('hearth', this)" class="pairing-vibe-btn text-left p-4 rounded-xl bg-charcoal-elevated hover:bg-culinary-gold-muted hover:text-charcoal-pure border border-hairline-dark transition-all flex items-center justify-between group">
+              <div>
+                <h4 class="font-headline text-lg group-hover:text-charcoal-pure">Oak-Grilled Côte de Boeuf</h4>
+                <span class="text-xs text-outline-variant group-hover:text-charcoal-pure/80">Pauillac Grand Cru, Graphite & Cassis</span>
+              </div>
+              <span class="material-symbols-outlined text-culinary-gold-bright group-hover:text-charcoal-pure">chevron_right</span>
+            </button>
+          </div>
+
+          <!-- Right: Sommelier Highlight Card -->
+          <div class="lg:col-span-7">
+            <div id="sommelier-pairing-card" class="p-8 sm:p-10 rounded-2xl glass-dark border border-gold-hairline shadow-2xl relative">
+              <div class="flex items-center justify-between mb-3">
+                <span class="px-2.5 py-1 rounded bg-culinary-gold-bright text-charcoal-pure font-label text-xs uppercase tracking-wider font-semibold">Burgundy Red</span>
+                <span class="font-label text-xs text-culinary-gold-muted uppercase tracking-wider">Magret Duck & Roasted Game</span>
+              </div>
+              <h3 class="font-display text-2xl sm:text-3xl text-parchment-cream mb-3 font-normal">2018 Domaine Dujac Vosne-Romanée Premier Cru</h3>
+              <p class="font-body text-base text-surface-variant leading-relaxed">
+                Silky ripe black cherries, sous-bois, dried violet florals, and seamless French oak tannins complementing spiced pomegranate reductions.
+              </p>
+              <div class="mt-6 pt-4 border-t border-hairline-dark flex items-center justify-between text-xs text-outline-variant">
+                <span>Curated by Head Sommelier Éléonore Laurent</span>
+                <span class="material-symbols-outlined text-[18px] text-culinary-gold-bright">verified</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TABLE RESERVATION BOOKING ENGINE -->
+    <section class="w-full px-4 sm:px-8 lg:px-margin py-24 bg-charcoal-pure text-parchment-cream relative overflow-hidden" id="reservation">
+      <!-- Ambient Radial Glows -->
+      <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-culinary-gold-muted/10 blur-[120px] pointer-events-none"></div>
+      <div class="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-terracotta-rich/10 blur-[120px] pointer-events-none"></div>
+
+      <div class="relative max-w-5xl mx-auto flex flex-col gap-space-lg">
+        <div class="flex flex-col items-center text-center gap-space-xs">
+          <span class="font-label text-xs uppercase tracking-widest text-culinary-gold-bright font-semibold">Table Reservations</span>
+          <h2 class="font-display text-3xl sm:text-5xl text-parchment-cream font-normal">Reserve Your Gastronomic Experience</h2>
+          <p class="font-body text-base text-surface-variant max-w-xl">
+            Reservations open 30 days in advance. For parties exceeding 8 guests or private cellar buyouts, please connect with our Maître d'.
+          </p>
+        </div>
+
+        <!-- Booking Interactive Panel -->
+        <form onsubmit="submitReservation(event)" class="p-6 sm:p-10 rounded-2xl bg-charcoal-elevated shadow-2xl flex flex-col gap-space-lg border border-hairline-dark">
+          
+          <!-- Step 1: Core Parameters Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+            
+            <!-- Date Picker -->
+            <div class="flex flex-col gap-space-xs">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant flex items-center gap-1.5 font-semibold">
+                <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">calendar_today</span>
+                Select Date
+              </label>
+              <input id="reservation-date" class="w-full px-4 py-3 rounded-lg bg-charcoal-pure text-parchment-cream font-body text-sm focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted cursor-pointer shadow-inner border border-white/5" type="date" required/>
+            </div>
+
+            <!-- Guest Count Controls -->
+            <div class="flex flex-col gap-space-xs">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant flex items-center gap-1.5 font-semibold">
+                <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">group</span>
+                Party Size
+              </label>
+              <div class="flex items-center justify-between px-3 py-2 rounded-lg bg-charcoal-pure shadow-inner border border-white/5">
+                <button class="w-9 h-9 rounded bg-charcoal-elevated hover:bg-surface-variant/20 flex items-center justify-center text-parchment-cream transition-colors" onclick="adjustGuests(-1)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">remove</span>
+                </button>
+                <div class="flex items-center gap-1.5">
+                  <span class="font-headline text-xl text-parchment-cream font-bold" id="guest-count-display">2</span>
+                  <span class="font-body text-xs text-outline-variant">Guests</span>
+                </div>
+                <button class="w-9 h-9 rounded bg-charcoal-elevated hover:bg-surface-variant/20 flex items-center justify-center text-parchment-cream transition-colors" onclick="adjustGuests(1)" type="button">
+                  <span class="material-symbols-outlined text-[18px]">add</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Seating Area Preference -->
+            <div class="flex flex-col gap-space-xs">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant flex items-center gap-1.5 font-semibold">
+                <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">chair</span>
+                Dining Ambience
+              </label>
+              <select id="reservation-ambience" class="w-full px-4 py-3 rounded-lg bg-charcoal-pure text-parchment-cream font-body text-sm focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted cursor-pointer shadow-inner border border-white/5">
+                <option value="main">Main Dining Salon (Candlelit)</option>
+                <option value="counter">Chef's Open Counter (L'Atelier)</option>
+                <option value="terrace">Glass Enclosed Garden Terrace</option>
+                <option value="cellar">Private Wine Cellar Alcove</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Large Party Notice -->
+          <div id="large-party-notice" class="hidden p-3 rounded-lg bg-terracotta-rich/20 border border-terracotta-rich/40 text-xs text-parchment-cream flex items-center gap-2">
+            <span class="material-symbols-outlined text-culinary-gold-bright text-[18px]">info</span>
+            <span>Parties of 8 or more will be accommodated in our Private Dining Alcove with a bespoke 5-course tasting menu.</span>
+          </div>
+
+          <!-- Step 2: Time Slot Pills -->
+          <div class="flex flex-col gap-space-xs">
+            <label class="font-label text-xs uppercase tracking-wider text-outline-variant flex items-center gap-1.5 font-semibold">
+              <span class="material-symbols-outlined text-[16px] text-culinary-gold-muted">schedule</span>
+              Available Evening Services
+            </label>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-space-xs" id="time-slot-grid">
+              <button class="time-slot-btn py-3 px-2 rounded-lg font-label text-xs uppercase tracking-wider transition-all bg-culinary-gold-muted text-charcoal-pure font-bold" data-time="17:30 Service" onclick="selectTime(this)" type="button">
+                17:30 Service
+              </button>
+              <button class="time-slot-btn py-3 px-2 rounded-lg bg-charcoal-pure text-parchment-cream font-label text-xs uppercase tracking-wider hover:bg-culinary-gold-muted hover:text-charcoal-pure transition-all border border-white/5" data-time="18:15 Service" onclick="selectTime(this)" type="button">
+                18:15 Service
+              </button>
+              <button class="time-slot-btn py-3 px-2 rounded-lg bg-charcoal-pure text-parchment-cream font-label text-xs uppercase tracking-wider hover:bg-culinary-gold-muted hover:text-charcoal-pure transition-all border border-white/5" data-time="19:00 Prime" onclick="selectTime(this)" type="button">
+                19:00 Prime
+              </button>
+              <button class="time-slot-btn py-3 px-2 rounded-lg bg-charcoal-pure text-parchment-cream font-label text-xs uppercase tracking-wider hover:bg-culinary-gold-muted hover:text-charcoal-pure transition-all border border-white/5" data-time="20:00 Prime" onclick="selectTime(this)" type="button">
+                20:00 Prime
+              </button>
+              <button class="time-slot-btn py-3 px-2 rounded-lg bg-charcoal-pure text-parchment-cream font-label text-xs uppercase tracking-wider hover:bg-culinary-gold-muted hover:text-charcoal-pure transition-all border border-white/5" data-time="21:15 Late" onclick="selectTime(this)" type="button">
+                21:15 Late
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Guest Details Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md pt-space-xs">
+            <div class="flex flex-col gap-space-xs">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant font-semibold">Guest Full Name *</label>
+              <input id="guest-name" class="w-full px-4 py-3 rounded-lg bg-charcoal-pure text-parchment-cream font-body text-sm focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted placeholder:text-outline border border-white/5" placeholder="Madame / Monsieur" type="text" required/>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant font-semibold">Direct Phone *</label>
+              <input id="guest-phone" class="w-full px-4 py-3 rounded-lg bg-charcoal-pure text-parchment-cream font-body text-sm focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted placeholder:text-outline border border-white/5" placeholder="+1 (415) 000-0000" type="tel" required/>
+            </div>
+            <div class="flex flex-col gap-space-xs">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant font-semibold">Email Confirmation *</label>
+              <input id="guest-email" class="w-full px-4 py-3 rounded-lg bg-charcoal-pure text-parchment-cream font-body text-sm focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted placeholder:text-outline border border-white/5" placeholder="concierge@luxury.com" type="email" required/>
+            </div>
+          </div>
+
+          <!-- Special Requests & Wishlist Integration -->
+          <div class="flex flex-col gap-space-xs">
+            <div class="flex items-center justify-between">
+              <label class="font-label text-xs uppercase tracking-wider text-outline-variant font-semibold">Special Occasion or Dietary Preferences</label>
+              <button type="button" onclick="attachWishlistToReservation()" class="text-xs text-culinary-gold-muted hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">bookmark</span> Attach Wishlist Items
+              </button>
+            </div>
+            <input id="reservation-notes" class="w-full px-4 py-3 rounded-lg bg-charcoal-pure text-parchment-cream font-body text-sm focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted placeholder:text-outline border border-white/5" placeholder="e.g., Anniversary celebration, pescatarian preferences, quiet table corner..." type="text"/>
+          </div>
+
+          <!-- Booking CTA Button -->
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs border-t border-hairline-dark">
+            <div class="flex items-center gap-2 text-outline-variant">
+              <span class="material-symbols-outlined text-[18px] text-culinary-gold-bright">lock</span>
+              <span class="font-body text-xs">Instant SMS &amp; Email confirmation guaranteed. Free cancellation up to 24 hrs.</span>
+            </div>
+            <button type="submit" class="w-full sm:w-auto px-10 py-4 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider font-bold hover:bg-culinary-gold-bright shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+              Confirm Table Reservation
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- CRITICAL ACCLAIM & VERIFIED REVIEWS -->
+    <section class="w-full px-4 sm:px-8 lg:px-margin py-24 bg-surface" id="reviews">
+      <div class="flex flex-col items-center text-center max-w-2xl mx-auto mb-space-lg">
+        <span class="font-label text-xs uppercase tracking-widest text-secondary font-semibold mb-space-xs">Critical Acclaim</span>
+        <h2 class="font-display text-3xl sm:text-5xl text-on-surface font-normal">Echoes from Gastronomic Critics</h2>
+        <p class="font-body text-base text-on-surface-variant mt-space-xs">
+          Celebrated by international culinary arbiters and distinguished epicureans alike.
+        </p>
+      </div>
+
+      <!-- Reviews Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter" id="reviews-bento">
+        <!-- Review 1 -->
+        <div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 border border-hairline-subtle">
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between">
+              <div class="flex text-culinary-gold-bright">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <span class="font-label text-xs uppercase tracking-wider text-outline font-semibold">Verified Visit</span>
+            </div>
+            <p class="font-headline text-lg sm:text-xl italic text-on-surface">
+              "Mercier's duck breast is a testament to the heights French culinary mastery can achieve when unbound by rigid nostalgia."
+            </p>
+            <p class="font-body text-xs text-on-surface-variant">
+              The balance of pomegranate acidity with velvety parsnip is nothing short of sublime. A quiet triumph in contemporary fine dining.
+            </p>
+          </div>
+          <div class="pt-space-md mt-space-sm flex items-center gap-space-sm border-t border-hairline-subtle">
+            <div class="w-11 h-11 rounded-full bg-surface-container-highest flex items-center justify-center font-headline text-lg text-secondary font-bold">
+              LF
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-semibold">Le Figaro Gastronomie</span>
+              <span class="font-body text-xs text-outline">Chief European Food Critic</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="p-space-lg rounded-2xl bg-surface-container shadow-md flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 border border-hairline-subtle">
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between">
+              <div class="flex text-culinary-gold-bright">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <span class="font-label text-xs uppercase tracking-wider text-secondary font-semibold">Inspector Notes</span>
+            </div>
+            <p class="font-headline text-lg sm:text-xl italic text-on-surface">
+              "The house-rolled truffle tagliatelle alone warrants crossing continents. Texture, perfume, and restraint exist in pure equilibrium."
+            </p>
+            <p class="font-body text-xs text-on-surface-variant">
+              From the opening amuse-bouche to the delicate mignardises, the kitchen demonstrates surgical technique wrapped in generous warmth.
+            </p>
+          </div>
+          <div class="pt-space-md mt-space-sm flex items-center gap-space-sm border-t border-hairline-subtle">
+            <div class="w-11 h-11 rounded-full bg-culinary-gold-muted/20 flex items-center justify-center font-headline text-lg text-secondary font-bold">
+              MG
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-semibold">Michelin Guide Inspector</span>
+              <span class="font-body text-xs text-outline">San Francisco &amp; Wine Country 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-300 border border-hairline-subtle">
+          <div class="flex flex-col gap-space-sm">
+            <div class="flex items-center justify-between">
+              <div class="flex text-culinary-gold-bright">
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+              </div>
+              <span class="font-label text-xs uppercase tracking-wider text-outline font-semibold">Verified Visit</span>
+            </div>
+            <p class="font-headline text-lg sm:text-xl italic text-on-surface">
+              "Intimate, candlelit tables and an unprecedented cocktail program that rivals the top speakeasies of Paris and Tokyo."
+            </p>
+            <p class="font-body text-xs text-on-surface-variant">
+              The smoked rosemary presentation was pure theatrical delight without overshadowing the nuanced depth of the rye.
+            </p>
+          </div>
+          <div class="pt-space-md mt-space-sm flex items-center gap-space-sm border-t border-hairline-subtle">
+            <div class="w-11 h-11 rounded-full bg-surface-container-highest flex items-center justify-center font-headline text-lg text-secondary font-bold">
+              ET
+            </div>
+            <div class="flex flex-col">
+              <span class="font-label text-xs text-on-surface font-semibold">Eater National Elite</span>
+              <span class="font-body text-xs text-outline">Editorial Dining Review</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for User Submitted Reviews -->
+      <div id="user-reviews-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mt-8"></div>
+
+      <!-- Leave a Review CTA Button -->
+      <div class="mt-12 flex justify-center">
+        <button onclick="openModal('review-modal')" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-surface-container-high text-on-surface font-label text-xs uppercase tracking-wider hover:bg-surface-container-highest transition-colors shadow-sm font-semibold">
+          <span class="material-symbols-outlined text-secondary text-[20px]">rate_review</span>
+          <span>Share Your Dining Impression</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- LOCATION, HOURS & HOSPITALITY DETAILS -->
+    <section class="w-full px-4 sm:px-8 lg:px-margin py-24 bg-surface-container-low" id="location-hours">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+        
+        <!-- Left: Hospitality Hours & Protocols -->
+        <div class="lg:col-span-6 flex flex-col justify-between p-6 sm:p-10 rounded-2xl bg-surface-container-lowest shadow-sm border border-hairline-subtle">
+          <div class="flex flex-col gap-space-md">
+            <div class="flex items-center gap-space-xs text-secondary">
+              <span class="material-symbols-outlined text-[20px]">room_service</span>
+              <span class="font-label text-xs uppercase tracking-widest font-semibold">Hospitality &amp; Operations</span>
+            </div>
+            <h2 class="font-display text-3xl sm:text-5xl text-on-surface font-normal">Visiting L'Étoile Bistro</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md mt-space-xs">
+              <!-- Dinner Hours -->
+              <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1 border border-hairline-subtle">
+                <span class="font-label text-xs uppercase tracking-wider text-secondary font-semibold">Dinner Service</span>
+                <span class="font-headline text-lg text-on-surface font-semibold">Tuesday – Sunday</span>
+                <span class="font-body text-xs text-on-surface-variant">17:30 – 23:00 (Last Seating 21:45)</span>
+              </div>
+              <!-- Weekend Brunch -->
+              <div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1 border border-hairline-subtle">
+                <span class="font-label text-xs uppercase tracking-wider text-secondary font-semibold">Weekend Brunch</span>
+                <span class="font-headline text-lg text-on-surface font-semibold">Saturday &amp; Sunday</span>
+                <span class="font-body text-xs text-on-surface-variant">10:30 – 14:30 (Pâtisserie &amp; Champagne)</span>
+              </div>
+            </div>
+
+            <!-- Etiquette & Valet Notes -->
+            <div class="space-y-space-sm pt-space-xs font-body text-xs sm:text-sm text-on-surface-variant">
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">local_parking</span>
+                <div>
+                  <strong class="text-on-surface font-semibold">Complimentary Valet:</strong> Available nightly at our Rue de la Paix porte-cochère starting from 17:00.
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">styler</span>
+                <div>
+                  <strong class="text-on-surface font-semibold">Dress Sanctuary:</strong> Smart elegant attire. We encourage gentlemen to wear collared shirts or tailored jackets.
+                </div>
+              </div>
+              <div class="flex items-start gap-space-sm">
+                <span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">celebration</span>
+                <div>
+                  <strong class="text-on-surface font-semibold">Private Cellar Gatherings:</strong> Dedicated salon for intimate galas accommodating up to 24 guests.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8 flex flex-wrap items-center gap-space-md">
+            <a class="px-6 py-3 rounded-lg bg-primary text-on-primary font-label text-xs uppercase tracking-wider hover:bg-charcoal-elevated transition-colors flex items-center gap-2 font-semibold" href="tel:+14155550198">
+              <span class="material-symbols-outlined text-[18px]">call</span>
+              <span>+1 (415) 555-0198</span>
+            </a>
+            <button onclick="openModal('concierge-modal')" class="px-6 py-3 rounded-lg bg-surface-container-high text-on-surface font-label text-xs uppercase tracking-wider hover:bg-surface-container-highest transition-colors flex items-center gap-2 font-semibold">
+              <span class="material-symbols-outlined text-[18px]">email</span>
+              <span>Concierge Inquiry</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Interactive District Map -->
+        <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-sm bg-surface-container flex flex-col border border-hairline-subtle">
+          <div class="w-full h-80 lg:h-full min-h-[380px] bg-cover bg-center relative flex flex-col justify-end p-4 sm:p-6" style="background-image: url('images/map.png');">
+            <div class="p-space-md rounded-xl glass-dark shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-parchment-cream">
+              <div class="flex items-center gap-space-sm">
+                <div class="w-10 h-10 rounded-full bg-culinary-gold-muted/20 flex items-center justify-center text-culinary-gold-bright shrink-0">
+                  <span class="material-symbols-outlined text-[22px]">pin_drop</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-headline text-base sm:text-lg font-semibold">Presidio Heights Historic District</span>
+                  <span class="font-body text-xs text-surface-variant">428 Rue de la Paix, San Francisco, CA 94118</span>
+                </div>
+              </div>
+              <a class="px-4 py-2 rounded bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider hover:bg-culinary-gold-bright transition-colors shrink-0 text-center font-semibold" href="https://maps.google.com/?q=428+Rue+de+la+Paix+San+Francisco+CA" target="_blank" rel="noopener noreferrer">
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="w-full bg-surface-container-low border-t border-hairline-subtle">
+    <div class="w-full px-4 sm:px-8 lg:px-margin py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-12">
+        
+        <!-- Brand Info -->
+        <div class="lg:col-span-4 flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm mb-space-xs">
+            <img alt="Logo" class="h-8 w-auto" src="images/logo.png"/>
+            <span class="font-headline text-2xl text-on-surface font-semibold">L'Étoile Bistro</span>
+          </div>
+          <p class="font-body text-sm text-on-surface-variant max-w-sm leading-relaxed">
+            Artisanal mastery meets contemporary gastronomy. Honoring seasonal French traditions with quiet luxury and sensory intimacy in every curated course.
+          </p>
+          <div class="flex items-center gap-space-md mt-space-sm">
+            <a class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-colors" href="#" title="Share L'Étoile">
+              <span class="material-symbols-outlined text-[18px]">share</span>
+            </a>
+            <a class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-colors" href="#" title="Gastronomy Instagram">
+              <span class="material-symbols-outlined text-[18px]">camera</span>
+            </a>
+            <a class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-colors" href="#" title="Michelin Guide">
+              <span class="material-symbols-outlined text-[18px]">star</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hours & Contacts -->
+        <div class="lg:col-span-3 flex flex-col gap-space-xs text-sm">
+          <h4 class="font-headline text-lg text-on-surface mb-space-xs font-semibold">Location &amp; Hours</h4>
+          <p class="font-body text-on-surface-variant flex items-start gap-2">
+            <span class="material-symbols-outlined text-culinary-gold-muted text-[18px] mt-0.5">location_on</span>
+            <span>428 Rue de la Paix, Presidio Heights<br/>San Francisco, CA 94118</span>
+          </p>
+          <p class="font-body text-on-surface-variant flex items-start gap-2 mt-2">
+            <span class="material-symbols-outlined text-culinary-gold-muted text-[18px] mt-0.5">schedule</span>
+            <span>Tue – Sun: 17:30 – 23:00<br/>Monday: Closed for Mise en Place</span>
+          </p>
+          <p class="font-body text-on-surface-variant flex items-center gap-2 mt-2">
+            <span class="material-symbols-outlined text-culinary-gold-muted text-[18px]">call</span>
+            <span>+1 (415) 555-0198</span>
+          </p>
+          <p class="font-body text-on-surface-variant flex items-center gap-2">
+            <span class="material-symbols-outlined text-culinary-gold-muted text-[18px]">mail</span>
+            <span>hospitality@letoilebistro.com</span>
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="lg:col-span-2 flex flex-col gap-2 text-sm">
+          <h4 class="font-headline text-lg text-on-surface mb-space-xs font-semibold">Gastronomy</h4>
+          <a href="#featured-menu" class="text-on-surface-variant hover:text-secondary transition-colors">Seasonal Menu</a>
+          <a href="#cellar" class="text-on-surface-variant hover:text-secondary transition-colors">Grand Cellar</a>
+          <a href="#reservation" class="text-on-surface-variant hover:text-secondary transition-colors">Reservations</a>
+          <a href="#our-story" class="text-on-surface-variant hover:text-secondary transition-colors">Chef Julien Mercier</a>
+          <button onclick="openModal('concierge-modal')" class="text-left text-on-surface-variant hover:text-secondary transition-colors">Private Dining & Events</button>
+        </div>
+
+        <!-- The Gazette Newsletter -->
+        <div class="lg:col-span-3 flex flex-col gap-space-sm">
+          <h4 class="font-headline text-lg text-on-surface mb-space-xs font-semibold">The Gazette</h4>
+          <p class="font-body text-xs text-on-surface-variant leading-relaxed">
+            Subscribe for seasonal tasting release dates, private cellar invitations, and gastronomic dispatches.
+          </p>
+          <form onsubmit="subscribeGazette(event)" class="flex flex-col gap-space-xs">
+            <input id="gazette-email" class="w-full px-4 py-2.5 bg-surface-container-lowest text-on-surface rounded-lg placeholder:text-outline font-body text-xs focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle" placeholder="Your email address" type="email" required/>
+            <button type="submit" class="w-full py-2.5 px-4 rounded-lg bg-primary text-on-primary font-label text-xs uppercase tracking-wider font-semibold hover:bg-charcoal-elevated transition-colors">
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Legal -->
+      <div class="pt-8 border-t border-hairline-subtle flex flex-col sm:flex-row items-center justify-between gap-4 font-body text-xs text-on-surface-variant">
+        <p>© 2025 L'Étoile Bistro. Fine Dining &amp; Artisanal Gastronomy. All rights reserved.</p>
+        <div class="flex items-center gap-6 font-label text-xs uppercase tracking-wider">
+          <button onclick="openInfoModal('Privacy Policy', 'We value your privacy. Guest information collected during reservation booking is strictly utilized for dining coordination, SMS confirmations, and direct hospitality communication. We never sell or distribute your data.')" class="hover:text-on-surface transition-colors">Privacy Policy</button>
+          <button onclick="openInfoModal('Terms of Hospitality', 'Reservations may be cancelled with full courtesy up to 24 hours prior to service. For private cellar bookings and parties of 8 or more, a 48-hour notice is appreciated. Corkage fee is $50 per 750ml bottle, maximum two bottles per party.')" class="hover:text-on-surface transition-colors">Terms of Hospitality</button>
+          <button onclick="openInfoModal('Accessibility', 'L\'Étoile Bistro is completely ADA accessible, including ramp entryways, elevator access to our Wine Cellar Alcove, and braille-formatted tasting menus available upon request.')" class="hover:text-on-surface transition-colors">Accessibility</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== TASTING WISHLIST SLIDE-OVER DRAWER ==================== -->
+  <div id="wishlist-backdrop" onclick="toggleWishlistDrawer(false)" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="wishlist-drawer" class="fixed top-0 right-0 h-full w-96 max-w-[90vw] z-50 bg-surface shadow-2xl p-6 flex flex-col justify-between border-l border-hairline-subtle">
+    <div class="flex flex-col gap-4 overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-hairline-subtle">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[24px] text-secondary">bookmark</span>
+          <h3 class="font-headline text-xl font-semibold text-on-surface">Your Tasting Wishlist</h3>
+        </div>
+        <button onclick="toggleWishlistDrawer(false)" class="p-1 rounded-full text-outline hover:text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+
+      <p class="text-xs font-body text-on-surface-variant">
+        Bookmark courses to curate your evening's dining itinerary. You can attach this directly to your table booking.
+      </p>
+
+      <!-- Wishlist items list -->
+      <div id="wishlist-items-container" class="flex flex-col gap-3 py-2">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <div class="pt-4 border-t border-hairline-subtle flex flex-col gap-3">
+      <div class="flex items-center justify-between text-sm">
+        <span class="font-label text-xs uppercase tracking-wider text-outline font-semibold">Estimated Tasting:</span>
+        <span id="wishlist-total-price" class="font-headline text-xl text-secondary font-bold">$0</span>
+      </div>
+      <button onclick="attachWishlistToReservation()" class="w-full py-3 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider font-bold hover:bg-culinary-gold-bright transition-colors shadow">
+        Attach to Table Reservation
+      </button>
+      <div class="flex items-center gap-2">
+        <button onclick="clearWishlist()" class="flex-1 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-label uppercase tracking-wider text-outline transition-colors">
+          Clear All
+        </button>
+        <button onclick="toggleWishlistDrawer(false)" class="flex-1 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-xs font-label uppercase tracking-wider text-on-surface transition-colors">
+          Continue Browsing
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== DISH DETAIL MODAL ==================== -->
+  <div id="dish-modal" class="modal-overlay fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-surface rounded-2xl shadow-2xl border border-hairline-subtle" id="dish-modal-body">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- ==================== RESERVATION CONFIRMATION MODAL ==================== -->
+  <div id="confirmation-modal" class="modal-overlay fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-xl max-h-[90vh] overflow-y-auto" id="confirmation-modal-body">
+      <!-- Injected by app.js -->
+    </div>
+  </div>
+
+  <!-- ==================== MY BOOKINGS MODAL ==================== -->
+  <div id="my-bookings-modal" class="modal-overlay fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-xl max-h-[90vh] overflow-y-auto bg-surface rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 border border-hairline-subtle">
+      <div class="flex items-center justify-between pb-4 border-b border-hairline-subtle">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[24px] text-secondary">calendar_month</span>
+          <h3 class="font-headline text-2xl font-semibold text-on-surface">Your Active Bookings</h3>
+        </div>
+        <button onclick="closeModal('my-bookings-modal')" class="p-1 rounded-full text-outline hover:text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+      <div id="my-bookings-body" class="flex flex-col gap-4">
+        <!-- Injected by app.js -->
+      </div>
+      <div class="pt-2 flex justify-end">
+        <a href="#reservation" onclick="closeModal('my-bookings-modal')" class="px-5 py-2.5 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider font-semibold hover:bg-culinary-gold-bright transition-colors">
+          Book Another Table
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== LEAVE A REVIEW MODAL ==================== -->
+  <div id="review-modal" class="modal-overlay fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-lg bg-surface rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 border border-hairline-subtle">
+      <div class="flex items-center justify-between pb-3 border-b border-hairline-subtle">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[24px] text-culinary-gold-bright">rate_review</span>
+          <h3 class="font-headline text-2xl font-semibold text-on-surface">Share Dining Impression</h3>
+        </div>
+        <button onclick="closeModal('review-modal')" class="p-1 rounded-full text-outline hover:text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+
+      <form onsubmit="submitUserReview(event)" class="flex flex-col gap-4">
+        <div>
+          <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Your Rating</label>
+          <div class="flex items-center gap-1">
+            <button type="button" onclick="setReviewRating(1)" class="review-star-btn text-culinary-gold-bright hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button type="button" onclick="setReviewRating(2)" class="review-star-btn text-culinary-gold-bright hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button type="button" onclick="setReviewRating(3)" class="review-star-btn text-culinary-gold-bright hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button type="button" onclick="setReviewRating(4)" class="review-star-btn text-culinary-gold-bright hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+            <button type="button" onclick="setReviewRating(5)" class="review-star-btn text-culinary-gold-bright hover:scale-110 transition-transform"><span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">star</span></button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Your Name *</label>
+            <input id="reviewer-name" type="text" placeholder="e.g. Catherine de M." required class="w-full px-4 py-2.5 rounded-lg bg-surface-container text-xs font-body focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle"/>
+          </div>
+          <div>
+            <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Occasion</label>
+            <select id="reviewer-visit-type" class="w-full px-4 py-2.5 rounded-lg bg-surface-container text-xs font-body focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle">
+              <option>Dinner Tasting</option>
+              <option>Anniversary Celebration</option>
+              <option>Chef's Counter Experience</option>
+              <option>Weekend Brunch</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Your Impression & Feedback *</label>
+          <textarea id="reviewer-comment" rows="4" placeholder="Describe the flavors, atmosphere, or service..." required class="w-full p-4 rounded-lg bg-surface-container text-xs font-body focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle"></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button type="button" onclick="closeModal('review-modal')" class="px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label text-xs uppercase tracking-wider text-on-surface">
+            Cancel
+          </button>
+          <button type="submit" class="px-6 py-2.5 rounded-lg bg-primary text-on-primary font-label text-xs uppercase tracking-wider font-semibold hover:bg-charcoal-elevated transition-colors">
+            Post Review
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== CONCIERGE INQUIRY MODAL ==================== -->
+  <div id="concierge-modal" class="modal-overlay fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-lg bg-surface rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-6 border border-hairline-subtle">
+      <div class="flex items-center justify-between pb-3 border-b border-hairline-subtle">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-[24px] text-secondary">room_service</span>
+          <h3 class="font-headline text-2xl font-semibold text-on-surface">Concierge Inquiry</h3>
+        </div>
+        <button onclick="closeModal('concierge-modal')" class="p-1 rounded-full text-outline hover:text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+
+      <p class="font-body text-xs text-on-surface-variant">
+        For private salon buyouts, sommelier cellar dinners, corporate galas, or dietary requirements, please share your details.
+      </p>
+
+      <form onsubmit="submitConciergeInquiry(event)" class="flex flex-col gap-4">
+        <div>
+          <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Your Name *</label>
+          <input id="concierge-name" type="text" placeholder="Full Name" required class="w-full px-4 py-2.5 rounded-lg bg-surface-container text-xs font-body focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle"/>
+        </div>
+        <div>
+          <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Email Address *</label>
+          <input id="concierge-email" type="email" placeholder="email@address.com" required class="w-full px-4 py-2.5 rounded-lg bg-surface-container text-xs font-body focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle"/>
+        </div>
+        <div>
+          <label class="font-label text-xs uppercase tracking-wider text-outline block mb-1 font-semibold">Inquiry Details *</label>
+          <textarea id="concierge-message" rows="4" placeholder="Desired dates, party size, event style, or specific questions..." required class="w-full p-4 rounded-lg bg-surface-container text-xs font-body focus:outline-none focus:ring-1 focus:ring-culinary-gold-muted border border-hairline-subtle"></textarea>
+        </div>
+
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button type="button" onclick="closeModal('concierge-modal')" class="px-5 py-2.5 rounded-lg bg-surface-container hover:bg-surface-container-high font-label text-xs uppercase tracking-wider text-on-surface">
+            Cancel
+          </button>
+          <button type="submit" class="px-6 py-2.5 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider font-semibold hover:bg-culinary-gold-bright transition-colors">
+            Send Inquiry
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== PRINTABLE SEASONAL MENU MODAL ==================== -->
+  <div id="print-menu-modal" class="modal-overlay fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-3xl max-h-[92vh] overflow-y-auto bg-surface rounded-2xl shadow-2xl p-8 sm:p-12 flex flex-col gap-8 border border-hairline-subtle">
+      <div class="flex items-center justify-between pb-4 border-b border-hairline-subtle no-print">
+        <span class="font-label text-xs uppercase tracking-widest text-secondary font-semibold">L'Étoile Bistro • Printed Gastronomy</span>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-4 py-2 rounded-lg bg-culinary-gold-muted text-charcoal-pure font-label text-xs uppercase tracking-wider font-semibold hover:bg-culinary-gold-bright flex items-center gap-1.5 transition-colors">
+            <span class="material-symbols-outlined text-[16px]">print</span>
+            <span>Print / Save PDF</span>
+          </button>
+          <button onclick="closeModal('print-menu-modal')" class="p-1 rounded-full text-outline hover:text-on-surface">
+            <span class="material-symbols-outlined text-[24px]">close</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable Menu Body -->
+      <div class="text-center flex flex-col items-center gap-2">
+        <img alt="Logo" class="h-10 w-auto mb-2" src="images/logo.png"/>
+        <h1 class="font-display text-4xl text-on-surface font-normal">L'ÉTOILE BISTRO</h1>
+        <p class="font-label text-xs uppercase tracking-widest text-secondary font-semibold">Seasonal French Gastronomy • Executive Chef Julien Mercier</p>
+        <span class="text-xs text-outline italic">Presidio Heights, San Francisco • Michelin Guide 2024 Selection</span>
+        <div class="w-24 h-[1.5px] bg-culinary-gold-muted my-4"></div>
+      </div>
+
+      <div class="space-y-8 text-on-surface">
+        <div>
+          <h3 class="font-headline text-xl text-secondary text-center uppercase tracking-widest mb-4">Les Entrées (Starters)</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Pan-Seared Hokkaido Scallops</strong>
+                <p class="text-xs text-on-surface-variant">Sunchoke velouté, brown butter hazelnut caper glaze, sea beans, preserved Meyer lemon</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$34</span>
+            </div>
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Wild Burgundy Escargots en Croûte</strong>
+                <p class="text-xs text-on-surface-variant">Clarified garlic-herb butter, Pernod reduction, flaky puff pastry dome, micro chervil</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$26</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-headline text-xl text-secondary text-center uppercase tracking-widest mb-4">Les Plats Principaux (Mains)</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Hand-Crafted Truffle Tagliatelle</strong>
+                <p class="text-xs text-on-surface-variant">Fresh egg dough, shaved Umbrian black winter truffles, cultured Isigny butter, 24-month Parmigiano</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$38</span>
+            </div>
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Crispy Skin Magret Duck Breast</strong>
+                <p class="text-xs text-on-surface-variant">Spiced pomegranate reduction, honey-caramelized baby parsnips, velvet parmentier purée</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$46</span>
+            </div>
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Côte de Boeuf for Two</strong>
+                <p class="text-xs text-on-surface-variant">32oz bone-in prime ribeye, bone marrow bordelaise, truffle pommes frites, charred shallot compote</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$115</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-headline text-xl text-secondary text-center uppercase tracking-widest mb-4">Les Desserts &amp; Cocktails</h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Valrhona Grand Cru Soufflé</strong>
+                <p class="text-xs text-on-surface-variant">70% Guanaja chocolate molten heart, Tahitian vanilla bean crème anglaise</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$19</span>
+            </div>
+            <div class="flex justify-between items-baseline border-b border-hairline-subtle pb-2">
+              <div>
+                <strong class="font-headline text-lg">Smoked Bergamot Old Fashioned</strong>
+                <p class="text-xs text-on-surface-variant">Charred rosemary smoke, cask-strength rye, blood orange crisp, hand-carved ice diamond</p>
+              </div>
+              <span class="font-headline text-lg text-secondary ml-4">$22</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center text-xs text-outline pt-6 border-t border-hairline-subtle">
+        L'Étoile Bistro • 428 Rue de la Paix, San Francisco • Reservations: letoilebistro.com or (415) 555-0198
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== GENERIC INFO MODAL (Privacy, Terms, etc.) ==================== -->
+  <div id="info-modal" class="modal-overlay fixed inset-0 z-50 bg-black/75 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="modal-content relative w-full max-w-lg bg-surface rounded-2xl shadow-2xl p-6 sm:p-8 flex flex-col gap-4 border border-hairline-subtle">
+      <div class="flex items-center justify-between pb-3 border-b border-hairline-subtle">
+        <h3 id="info-modal-title" class="font-headline text-2xl font-semibold text-on-surface">Information</h3>
+        <button onclick="closeModal('info-modal')" class="p-1 rounded-full text-outline hover:text-on-surface">
+          <span class="material-symbols-outlined text-[24px]">close</span>
+        </button>
+      </div>
+      <p id="info-modal-body" class="font-body text-sm text-on-surface-variant leading-relaxed"></p>
+      <div class="pt-2 flex justify-end">
+        <button onclick="closeModal('info-modal')" class="px-5 py-2 rounded-lg bg-primary text-on-primary font-label text-xs uppercase tracking-wider">
+          Understood
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- App JavaScript Engine -->
+  <script src="js/app.js"></script>
+  <script>
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function openPrintableMenuModal() {
+      openModal('print-menu-modal');
+    }
+
+    function openInfoModal(title, text) {
+      document.getElementById('info-modal-title').textContent = title;
+      document.getElementById('info-modal-body').textContent = text;
+      openModal('info-modal');
+    }
+  </script>
+</body>
+</html>
+
